@@ -7,5 +7,12 @@ metadata:
 spec:
   ports:
   - port: 8083
+    name: user-api
+    targetPort: 8083
+    protocol: TCP
+  - port: 5556
+    name: jmxexporter
+    targetPort: 5556
+    protocol: TCP
   selector:
     service: users-api
